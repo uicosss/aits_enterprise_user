@@ -1,0 +1,85 @@
+
+# Reserving this pattern for test files that should not be synced
+__*
+
+
+## Configuration Settings
+config.php
+
+## Logs
+logs/*
+logs
+*.log
+
+## Run
+run/*
+run
+
+## Backup
+backup/*
+backup
+
+## MACOSX
+__MACOSX/*
+__MACOSX
+
+## _Notes
+_notes/*
+_notes
+
+## Temp Files
+._*
+
+## PHPstorm Config
+.idea/*
+
+## Session Directory
+data/session/*
+
+## Dreamweaver LCK files
+*.LCK
+
+## Bluestem Auth Files
+*.netids
+
+## Apps Data directories, these are directories were data is uploaded or downloaded from
+data/apps/*/data/*
+
+## Transcript-Uploads uploaded files
+data/apps/transcript-uploads/sqldumps/*
+data/apps/transcript-uploads/logs/*
+data/apps/transcript-uploads/Transcripts_To_Convert/*
+data/apps/transcript-uploads/Transcripts_To_Print/*
+
+## HEOA Updates to OSSS & Textbooks page
+data/heoa/*
+data/osss/*
+htdocs/current_students/textbooks/term/*
+
+# Error Compiler
+data/error-compile/*
+
+## FERPA
+htdocs/ferpa/quiz/data.txt
+htdocs/ferpa/quiz/data*
+htdocs/ferpa/quiz_no_netID/*.txt
+htdocs/ferpa/quiz_no_netID/data*
+
+## Registration Revision Form Output
+htdocs/registration/reinstatement/data_reinstatement.txt
+data/apps/reinstatement/data_reinstatement.txt
+
+# Config Files used in Apps,
+config.php
+
+# Composer Vendor folder
+vendor
+
+# Generated JSON in api directory
+htdocs/assets/api/*.json
+
+# Phinx data directory
+db/data/*
+
+# Phinx Config file
+phinx.yml

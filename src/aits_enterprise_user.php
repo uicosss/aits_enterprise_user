@@ -204,7 +204,7 @@ class aits_enterprise_user
     {
 
         // AITS Term API Source
-        $source = 'https://webservices-dev.admin.uillinois.edu/xfunctionalWS/data/' . $this->senderAppID . '/EnterpriseUser/1_1/' . $this->netid . '/' . $this->domain;
+        $source = 'https://webservices-dev.admin.uillinois.edu/xfunctionalWS/data/' . $this->senderAppID . '/EnterpriseUser/1_1/' . $this->netid . '/' . $this->domain; // todo - determine how to handle switching resource in production
 
         // Initialize a curl resource
         $curl = curl_init();

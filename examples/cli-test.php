@@ -39,8 +39,7 @@ try {
     // Get the results of a call
     $personAPI->findPerson();
 
-    print_r($personAPI->getResponse());
-//    print_r($personAPI->getResponse('raw'));
+    print_r($personAPI->getResponse('raw'));
 
 } catch (\Exception $e){
 

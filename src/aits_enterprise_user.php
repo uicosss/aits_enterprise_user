@@ -46,6 +46,13 @@ class aits_enterprise_user
     protected $uin;
 
     /**
+     * Boolean used to determine if AITS dev endpoint should be utilized
+     *
+     * @var bool
+     */
+    protected $dev = false;
+
+    /**
      * aits_enterprise_user constructor.
      * @param null $netID
      * @param null $domain
@@ -63,6 +70,22 @@ class aits_enterprise_user
 
         // Set the AITS provided SenderAppId
         $this->setSenderAppId($senderAppID);
+
+    }
+
+    /**
+     * Void method used to set
+     *
+     * @param bool $dev
+     */
+    public function dev($dev=true)
+    {
+
+        if($dev) {
+
+            $this->dev = true;
+
+        }
 
     }
 
@@ -203,8 +226,16 @@ class aits_enterprise_user
     public function findPerson()
     {
 
-        // AITS Term API Source
-        $source = 'https://webservices-dev.admin.uillinois.edu/xfunctionalWS/data/' . $this->senderAppID . '/EnterpriseUser/1_1/' . $this->netid . '/' . $this->domain; // todo - determine how to handle switching resource in production
+        // AITS EnterpriseUser API Source
+        if($this->dev) {
+
+            $source = 'https://webservices-dev.admin.uillinois.edu/xfunctionalWS/data/' . $this->senderAppID . '/EnterpriseUser/1_1/' . $this->netid . '/' . $this->domain;
+
+        } else {
+
+            $source = 'https://webservices.admin.uillinois.edu/xfunctionalWS/data/' . $this->senderAppID . '/EnterpriseUser/1_1/' . $this->netid . '/' . $this->domain;
+
+        }
 
         // Initialize a curl resource
         $curl = curl_init();

@@ -33,7 +33,7 @@ try {
 
     }
 
-    // Call the AITS Term API
+    // Call the AITS EnterpriseUser API
     $personAPI = new dpazuic\aits_enterprise_user($argv[2], $argv[3], $argv[1]);
 
     // Get the results of a call
